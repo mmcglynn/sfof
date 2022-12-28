@@ -35,9 +35,24 @@ Headings
 
 ### Font Sizes
 
-H2 - 44px  
-H3 - 26px
-P - 18px
+#### Desktop
+Page title - 44px  
+Sub-heading - 26px  
+Body copy - 18px  
+Content type (in red bar)- 26px  
+Top navigation - 16px
+#### Tablet
+Page title - 32px  
+Sub-heading - 24px  
+Body copy - 16px  
+Content type (in red bar)- 26px  
+Top navigation - 14px
+#### Mobile
+Page title - 30px  
+Sub-heading - 20px  
+Body copy - 15px  
+Content type (in red bar)- 21px  
+Top navigation - 16px
 
 ### Dimensions
 All backgrounds go 100% window width.
