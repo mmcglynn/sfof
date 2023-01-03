@@ -24,36 +24,40 @@
 <?php wp_body_open(); ?>
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'sfof' ); ?></a>
+	
+	<section class="sub-header bg-blue">
+		<div class="inner p-relative full-height">
+			<a href="https://www.exposedbycmd.org/" target="_blank" rel="noreferrer noopener external" data-wpel-link="external" class="flex-box full-height flex-center">
+				<img src="<?php echo get_template_directory_uri() . '/assets/cms-icon.svg';?>" alt="The Center for Media and Democracy" class="cms-icon" />
+			</a>
+		</div>
+	</section>
+	
+	<header id="masthead" class="site-header bg-gray border-bottom thick b-red">
+		<div class="inner p-relative padded-top-large padded-bottom-large">
+			<div class="flex-box stay-flex two-column space-between">
+				<div class="site-branding">
+					<?php
+					the_custom_logo();
+					?>
+				</div><!-- .site-branding -->
 
-	<header id="masthead" class="site-header">
-		<div class="site-branding">
-			<?php
-			the_custom_logo();
-			if ( is_front_page() && is_home() ) :
-				?>
-				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-				<?php
-			else :
-				?>
-				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
-				<?php
-			endif;
-			$sfof_description = get_bloginfo( 'description', 'display' );
-			if ( $sfof_description || is_customize_preview() ) :
-				?>
-				<p class="site-description"><?php echo $sfof_description; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></p>
-			<?php endif; ?>
-		</div><!-- .site-branding -->
-
-		<nav id="site-navigation" class="main-navigation">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'sfof' ); ?></button>
-			<?php
-			wp_nav_menu(
-				array(
-					'theme_location' => 'menu-1',
-					'menu_id'        => 'primary-menu',
-				)
-			);
-			?>
-		</nav><!-- #site-navigation -->
+				<nav id="site-navigation" class="main-navigation p-relative">
+					<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'sfof' ); ?></button>
+					<?php
+					/* Nav Menu */
+					wp_nav_menu(
+						array(
+							'theme_location' => 'menu-1',
+							'menu_id'        => 'primary-menu',
+							'menu_class'	=> 'no-list flex-box flex-end',
+						)
+					);
+					
+					/* Search Form */
+					get_search_form();
+					?>
+				</nav><!-- #site-navigation -->
+			</div>
+		</div>
 	</header><!-- #masthead -->

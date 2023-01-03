@@ -131,6 +131,15 @@ function sfof_widgets_init() {
 			'after_title'   => '</h2>',
 		)
 	);
+	register_sidebar( array(
+		'name'          => esc_html__( 'SubFooter Sidebar', 'sfof' ),
+		'id'            => 'sidebar-subfooter',
+		'description'   => esc_html__( 'Add widgets here. This will globally throughout the site in the sub footer.', 'sfof' ),
+		'before_widget' => '<div id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h3 class="widget-title">',
+		'after_title'   => '</h3>',
+	) );
 }
 add_action( 'widgets_init', 'sfof_widgets_init' );
 
@@ -186,3 +195,123 @@ add_filter('rest_endpoints', function ($endpoints) {
     }
     return $endpoints;
 });
+
+// SFOF assets
+include_once get_template_directory() . '/inc/sfof-assets.php';
+SFOF_Theme_Assets_Loader::init();
+
+// SFOF Custom Post Types
+include_once get_template_directory() . '/inc/sfof-post-types.php';
+
+/* PC Colors */
+
+function pc_custom_colors() {
+	$colors = array(
+			array(
+				'name'  => 'Black',
+				'slug' => 'black',
+				'color' => '#000',
+			),
+			array(
+				'name'  => 'Blue',
+				'slug' => 'blue',
+				'color' => '#0a659c',
+			),
+			array(
+				'name'  => 'Light Blue',
+				'slug' => 'light-blue',
+				'color' => '#017bba',
+			),
+			array(
+				'name'  => 'Red',
+				'slug' => 'red',
+				'color' => '#af2525',
+			),
+			array(
+				'name'  => 'Light Gray',
+				'slug' => 'light-gray',
+				'color' => '#efefef',
+			),
+			array(
+				'name'  => 'Gray',
+				'slug' => 'gray',
+				'color' => '#8c8c8c',
+			),
+			array(
+				'name'  => 'Dark Gray',
+				'slug' => 'dark-gray',
+				'color' => '#333333',
+			),
+			array(
+				'name'  => 'White',
+				'slug' => 'white',
+				'color' => '#FFF',
+			)
+		);
+		
+	return $colors;
+}
+
+/* Add PC Branding Colors to Swatches */
+function pc_color_palette() {
+
+	$colors = pc_custom_colors();
+	
+	// Default Colors
+	add_theme_support( 'editor-color-palette', $colors );
+	
+	// Classes
+	add_theme_support( 'wp-block-styles');
+	
+}
+
+add_action( 'after_setup_theme', 'pc_color_palette' );
+
+/* Add CSS Styles to header FRONTEND */
+function front_pc_add_custom_colors() {
+	// get custom colors 
+	$get_colors = pc_custom_colors();
+	$styles = '';
+	if($get_colors) {
+		foreach($get_colors as $color) {
+			if ($color['name'] != '') {
+				$styles .= '.has-'.str_replace(" ", "-", strtolower($color['slug'])).'-color{color:'.$color['color'].' !important}.has-'.str_replace(" ", "-", strtolower($color['slug'])).'-color-border,.has-'.str_replace(" ", "-", strtolower($color['slug'])).'-color-border:after,.has-'.str_replace(" ", "-", strtolower($color['slug'])).'-color-border:before{border-color:'.$color['color'].' !important}.has-'.str_replace(" ", "-", strtolower($color['slug'])).'-background-color{background-color:'.$color['color'].' !important}.border-'.str_replace(" ", "-", strtolower($color['slug'])).':after{background: '.$color['color'].';}';
+			}
+		}
+	}
+	?>
+	<style>
+		<?php echo $styles;?>
+	</style>
+	<?php
+}
+
+//add frontend styles
+add_action( 'wp_head', 'front_pc_add_custom_colors');
+
+// Filter Players
+function sfof_filter_players() {
+  $catSlug = $_POST['category'];
+
+  $ajaxposts = new WP_Query([
+    'post_type' => 'player',
+    'posts_per_page' => -1,
+    'category_name' => $catSlug,
+    'orderby' => 'menu_order', 
+    'order' => 'desc',
+  ]);
+  $response = '';
+
+  if($ajaxposts->have_posts()) {
+    while($ajaxposts->have_posts()) : $ajaxposts->the_post();
+      $response .= get_template_part('templates/_components/project-list-item');
+    endwhile;
+  } else {
+    $response = 'empty';
+  }
+
+  echo $response;
+  exit;
+}
+add_action('wp_ajax_sfof_filter_players', 'sfof_filter_players');
+add_action('wp_ajax_nopriv_sfof_filter_players', 'sfof_filter_players');
