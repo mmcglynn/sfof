@@ -9,23 +9,31 @@
  * @package sfof
  */
 
+
+if( is_active_sidebar( 'sidebar-subfooter' ) ):
+	$bg = '';
+	if ($subBG) {
+		$bg = 'style="background-image:url('.$subBG.');background-position: center; background-size: cover;"';
+	}
+?>
+	<section class="subfooter full-width padded-top-large-double padded-bottom-large-double p-relative bg-dark-gray" <?php echo $bg;?>>
+		<div class="inner flex-box space-between p-relative bring-to-front">
+			<?php dynamic_sidebar('sidebar-subfooter'); ?>
+		</div>
+	</section>
+<?php
+endif;
 ?>
 
-	<footer id="colophon" class="site-footer">
-		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'sfof' ) ); ?>">
-				<?php
-				/* translators: %s: CMS name, i.e. WordPress. */
-				printf( esc_html__( 'Proudly powered by %s', 'sfof' ), 'WordPress' );
-				?>
-			</a>
-			<span class="sep"> | </span>
-				<?php
-				/* translators: 1: Theme name, 2: Theme author. */
-				printf( esc_html__( 'Theme: %1$s by %2$s.', 'sfof' ), 'sfof', '<a href="http://underscores.me/">Underscores.me</a>' );
-				?>
-		</div><!-- .site-info -->
-	</footer><!-- #colophon -->
+
+	<footer class="full-width padded-top-large padded-bottom-large p-relative">
+		<div class="inner">
+			<p class="padded-vert no-margin txt-center">
+				<span class="copyright">Copyright &copy;<?php echo date( 'Y', current_time( 'timestamp', 1 ) ); ?>.</span>
+				<a class="txt-body" href="<?php echo home_url();?>" target="_blank"><?php echo get_bloginfo('name');?></a>
+			</p>
+		</div>
+	</footer>
 </div><!-- #page -->
 
 <?php wp_footer(); ?>
