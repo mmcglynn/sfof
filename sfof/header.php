@@ -38,8 +38,19 @@
 			<div class="flex-box stay-flex two-column space-between">
 				<div class="site-branding">
 					<?php
-					the_custom_logo();
+					$desktop = get_template_directory_uri() . '/assets/wordmark-desktop.svg';
+					$tablet = get_template_directory_uri() . '/assets/wordmark-tablet.svg';
+					$mobile = get_template_directory_uri() . '/assets/wordmark-mobile-2.svg';
 					?>
+					<a href="<?php echo home_url();?>" class="custom-logo-link full-width show-desktop" rel="home" aria-current="page">
+						<img src="<?php echo $desktop;?>" class="custom-logo" alt="Main logo for SFOF" decoding="async" />
+					</a>
+					<a href="<?php echo home_url();?>" class="custom-logo-link full-width show-tablet" rel="home" aria-current="page">
+						<img src="<?php echo $tablet;?>" class="custom-logo" alt="Main logo for SFOF" decoding="async" />
+					</a>
+					<a href="<?php echo home_url();?>" class="custom-logo-link full-width show-mobile" rel="home" aria-current="page">
+						<img src="<?php echo $desktop;?>" class="custom-logo" alt="Main logo for SFOF" decoding="async" />
+					</a>
 				</div><!-- .site-branding -->
 
 				<nav id="site-navigation" class="main-navigation p-relative">

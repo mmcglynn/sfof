@@ -213,14 +213,19 @@ function pc_custom_colors() {
 				'color' => '#000',
 			),
 			array(
+				'name'  => 'Dark Blue',
+				'slug' => 'dark-blue',
+				'color' => '#0B659D',
+			),
+			array(
 				'name'  => 'Blue',
 				'slug' => 'blue',
-				'color' => '#0a659c',
+				'color' => '#017ABB',
 			),
 			array(
 				'name'  => 'Light Blue',
 				'slug' => 'light-blue',
-				'color' => '#017bba',
+				'color' => '#E3F6F7',
 			),
 			array(
 				'name'  => 'Red',
@@ -230,12 +235,12 @@ function pc_custom_colors() {
 			array(
 				'name'  => 'Light Gray',
 				'slug' => 'light-gray',
-				'color' => '#efefef',
+				'color' => '#EFEFEF',
 			),
 			array(
 				'name'  => 'Gray',
 				'slug' => 'gray',
-				'color' => '#8c8c8c',
+				'color' => '#8C8C8C',
 			),
 			array(
 				'name'  => 'Dark Gray',
