@@ -1017,3 +1017,26 @@ textarea {
 	margin-right: auto;
 	margin-bottom: 1.5em;
 }
+
+/* Social Icons */
+.subfooter > .flex-box > *:nth-child(2) .wp-block-group__inner-container .wp-block-social-links.aligncenter > li.wp-social-link-facebook > a {
+	background-image: url(assets/face-book.svg);
+	background-size: cover;
+}
+
+.subfooter > .flex-box > *:nth-child(2) .wp-block-group__inner-container .wp-block-social-links.aligncenter > li.wp-social-link-twitter > a {
+	background-image: url(assets/twitter.svg);
+	background-size: cover;
+}
+
+.subfooter > .flex-box > *:nth-child(2) .wp-block-group__inner-container .wp-block-social-links.aligncenter > li.wp-social-link-youtube > a {
+	background-image: url(assets/you-tube.svg);
+	background-size: cover;
+}
+
+.subfooter > .flex-box > *:nth-child(2) .wp-block-group__inner-container .wp-block-social-links.aligncenter > li.wp-social-link-facebook > a > svg,
+.subfooter > .flex-box > *:nth-child(2) .wp-block-group__inner-container .wp-block-social-links.aligncenter > li.wp-social-link-twitter > a > svg,
+.subfooter > .flex-box > *:nth-child(2) .wp-block-group__inner-container .wp-block-social-links.aligncenter > li.wp-social-link-youtube > a > svg {
+	opacity: 0;
+}
+
