@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 33 33" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
+    <g id="Facebook" transform="matrix(1,0,0,1,-818.5,-4134.5)">
+        <circle cx="835" cy="4151" r="16" style="fill:none;"/>
+        <clipPath id="_clip1">
+            <circle cx="835" cy="4151" r="16"/>
+        </clipPath>
+        <g clip-path="url(#_clip1)">
+            <path id="Facebook-Icon" serif:id="Facebook Icon" d="M832.672,4159L832.672,4151.68L830.004,4151.68L830.004,4148.88L832.673,4148.88L832.673,4146.77C832.673,4144.33 834.26,4143 836.61,4143C837.735,4143 838.722,4143.07 839.004,4143.1L839.004,4145.68L837.336,4145.68C836.058,4145.68 835.819,4146.24 835.819,4147.07L835.819,4148.88L838.877,4148.88L838.48,4151.68L835.819,4151.68L835.819,4159L832.672,4159Z" style="fill:white;fill-rule:nonzero;"/>
+        </g>
+        <circle cx="835" cy="4151" r="16" style="fill:none;stroke:white;stroke-width:1px;"/>
+    </g>
+</svg>
