@@ -15,7 +15,7 @@ class SFOF_Theme_Assets_Loader {
 	
 	public static function init() {
 		add_action( 'wp_enqueue_scripts', array( __CLASS__, 'enqueue_styles' ) );
-		//add_action( 'wp_enqueue_scripts', array( __CLASS__, 'enqueue_scripts' ) );
+		add_action( 'wp_enqueue_scripts', array( __CLASS__, 'enqueue_scripts' ) );
 	}
 	
 	/*--------------------------------------------------------------------------------------
@@ -40,7 +40,7 @@ class SFOF_Theme_Assets_Loader {
 	public static function enqueue_scripts() {
 
 		// register the script
-		wp_register_script( 'theme-compiled', get_template_directory_uri() . '/core/assets/js/index.compiled.js', array('wc-polyfill'), wp_rand( 1, 10000 ), true );
+		wp_enqueue_script( 'theme-js', get_template_directory_uri() . '/js/index.js', array(), wp_rand( 1, 10000 ), true );
 		
 	}
 

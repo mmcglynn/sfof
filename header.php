@@ -40,7 +40,8 @@
 					<?php
 					$desktop = get_template_directory_uri() . '/assets/wordmark-desktop.svg';
 					$tablet = get_template_directory_uri() . '/assets/wordmark-tablet.svg';
-					$mobile = get_template_directory_uri() . '/assets/wordmark-mobile-2.svg';
+					$mobile = get_template_directory_uri() . '/assets/wordmark-mobile-1.svg';
+					$mobile2 = get_template_directory_uri() . '/assets/wordmark-mobile-2.svg';
 					?>
 					<a href="<?php echo home_url();?>" class="custom-logo-link full-width show-desktop" rel="home" aria-current="page">
 						<img src="<?php echo $desktop;?>" class="custom-logo" alt="Main logo for SFOF" decoding="async" />
@@ -48,13 +49,24 @@
 					<a href="<?php echo home_url();?>" class="custom-logo-link full-width show-tablet" rel="home" aria-current="page">
 						<img src="<?php echo $tablet;?>" class="custom-logo" alt="Main logo for SFOF" decoding="async" />
 					</a>
-					<a href="<?php echo home_url();?>" class="custom-logo-link full-width show-mobile" rel="home" aria-current="page">
-						<img src="<?php echo $desktop;?>" class="custom-logo" alt="Main logo for SFOF" decoding="async" />
+					<a href="<?php echo home_url();?>" class="custom-logo-link full-width full-height show-mobile" rel="home" aria-current="page">
+						<img src="<?php echo $mobile;?>" class="custom-logo" alt="Main logo for SFOF" decoding="async" />
 					</a>
 				</div><!-- .site-branding -->
 
 				<nav id="site-navigation" class="main-navigation p-relative">
-					<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'sfof' ); ?></button>
+					<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'sfof' ); ?>
+						<span></span>
+						<span></span>
+						<span></span>
+						<span></span>
+					</button>
+					<button class="menu-toggle search-toggle" id="search-toggle" aria-controls="search-form" aria-expanded="false">
+						<span></span>
+						<span></span>
+						<span></span>
+						<span></span>
+					</button>
 					<?php
 					/* Nav Menu */
 					wp_nav_menu(
@@ -70,5 +82,8 @@
 					?>
 				</nav><!-- #site-navigation -->
 			</div>
+			<a href="<?php echo home_url();?>" class="custom-logo-link bottom-logo full-width full-height show-mobile" rel="home" aria-current="page">
+				<img src="<?php echo $mobile2;?>" class="custom-logo" alt="Main logo for SFOF" decoding="async" />
+			</a>
 		</div>
 	</header><!-- #masthead -->
