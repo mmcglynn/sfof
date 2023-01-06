@@ -33,21 +33,39 @@ Body copy, navigation
 Headings  
 **Ruffina**
 
-### Font Sizes
+## Font Sizes
 
-#### Desktop
+### Desktop
+#### Footer
+Navigation - 18px Work Sans Light  
+Address title - 20px Work Sans  
+Address copy - 18px Work Sans Light
+
 Page title - 44px  
 Sub-heading - 26px  
 Body copy - 18px  
 Content type (in red bar)- 26px  
-Top navigation - 16px
-#### Tablet
+Top navigation - 16px  
+
+### Tablet
+
+#### Footer
+Navigation - 16px Work Sans Light  
+Address title - 18px Work Sans  
+Address copy - 16px Work Sans Light
+
 Page title - 32px  
 Sub-heading - 24px  
 Body copy - 16px  
 Content type (in red bar)- 26px  
 Top navigation - 14px
-#### Mobile
+
+### Mobile
+#### Footer
+Navigation - 18px Work Sans Light  
+Address title - 16px Work Sans  
+Address copy - 16px Work Sans Light
+
 Page title - 30px  
 Sub-heading - 20px  
 Body copy - 15px  
