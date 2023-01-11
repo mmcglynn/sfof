@@ -16,7 +16,7 @@ if( is_active_sidebar( 'sidebar-subfooter' ) ):
 		$bg = 'style="background-image:url('.$subBG.');background-position: center; background-size: cover;"';
 	}
 ?>
-	<section class="subfooter full-width padded-top-large-double padded-bottom-large-double p-relative bg-dark-gray" <?php echo $bg;?>>
+	<section class="subfooter full-width padded-top-large-double padded-bottom-large p-relative bg-dark-gray" <?php echo $bg;?>>
 		<div class="inner flex-box space-between p-relative bring-to-front">
 			<?php dynamic_sidebar('sidebar-subfooter'); ?>
 		</div>
@@ -26,11 +26,11 @@ endif;
 ?>
 
 
-	<footer class="full-width padded-top-large padded-bottom-large p-relative">
-		<div class="inner">
-			<p class="padded-vert no-margin txt-center">
+	<footer class="full-width padded-bottom-large p-relative bg-dark-gray">
+		<div class="inner border-top padded-top-large">
+			<p class="padded-vert no-margin txt-center smaller txt-white">
 				<span class="copyright">Copyright &copy;<?php echo date( 'Y', current_time( 'timestamp', 1 ) ); ?>.</span>
-				<a class="txt-body" href="<?php echo home_url();?>" target="_blank"><?php echo get_bloginfo('name');?></a>
+				<a class="txt-body" href="<?php echo home_url();?>" target="_blank" style="color: #fff"><?php echo get_bloginfo('name');?></a>
 			</p>
 		</div>
 	</footer>
