@@ -1031,17 +1031,23 @@ textarea {
 /* Social Icons */
 .subfooter > .flex-box > *:nth-child(2) .wp-block-group__inner-container .wp-block-social-links.aligncenter > li.wp-social-link-facebook > a {
 	background-image: url(assets/face-book.svg);
-	background-size: 30px;
+	background-size: 100% auto;
+	height: 100%;
+	width: 100%;
 }
 
 .subfooter > .flex-box > *:nth-child(2) .wp-block-group__inner-container .wp-block-social-links.aligncenter > li.wp-social-link-twitter > a {
 	background-image: url(assets/twitter.svg);
 	background-size: cover;
+	height: 100%;
+	width: 100%;
 }
 
 .subfooter > .flex-box > *:nth-child(2) .wp-block-group__inner-container .wp-block-social-links.aligncenter > li.wp-social-link-youtube > a {
 	background-image: url(assets/you-tube.svg);
 	background-size: cover;
+	height: 100%;
+	width: 100%;
 }
 
 .subfooter > .flex-box > *:nth-child(2) .wp-block-group__inner-container .wp-block-social-links.aligncenter > li.wp-social-link-facebook > a > svg,

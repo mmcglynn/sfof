@@ -223,6 +223,7 @@ h2 {
 }
 
 h3 {
+	color: var(--blue-color);
 	font-size: 1.5em;
 	margin: 0 0 var(--main-normal-spacing);
 }
@@ -701,7 +702,7 @@ header.bring-to-front {
 
 .inner {
 	margin: 0 auto;
-	max-width: 1400px;
+	max-width: 1200px;
 	width: 94%;
 }
 
@@ -1498,6 +1499,10 @@ body.single .wp-caption {
 	border: 1px solid var(--blue-color);
 }
 
+	.member-creds > *:last-child {
+		margin-bottom: calc(var(--main-large-spacing) + 5px );
+	}
+
 /* Posts */
 .post:before,
 .wp-caption:before{
@@ -1652,6 +1657,20 @@ footer {
 	
 	.border-right-tablet {
 		border-right: 1px solid var(--main-border-color);
+	}
+
+	.search-form {
+		height: 34px;
+	}
+
+	input[type="search"] {
+		height: 34px;
+		font-size: .9em;
+		width: 180px;
+	}
+
+	.search-form:before {
+		background-size: 20px 20px;
 	}
 	
 	.featured-flex > *:first-child > *:first-child,
@@ -1927,7 +1946,8 @@ footer {
 			background: none;
 			border: 4px solid #fff;
 			border-radius: 50%;
-			top: 10px;
+			top: 9px !important;
+			left: 10px !important;
 			width: 23px;
 			height: 23px;
 		}
@@ -1950,8 +1970,8 @@ footer {
 		.menu-toggle.search-toggle > span:last-child {
 			transform: rotate(45deg);
 			width: 9px;
-			top: 31px;
-			left: 30px;
+			top: 30px;
+			left: 27px !important;
 		}
 	
 	.hide-phone-small,
@@ -1966,7 +1986,7 @@ footer {
 		height: 3px;
 		opacity: 1;
 		position: absolute;
-		left: 12px;
+		left: 11px;
 		width: 25px;
 		transition: all .25s ease;
 		z-index: 1;

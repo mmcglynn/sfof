@@ -28,7 +28,7 @@
 
 $post_types = array(
 	
-	array(
+	/*array(
 		'slug' => 'member',
 		'display_plural' => 'Members',
 		'display_singular' => 'Member',
@@ -54,7 +54,7 @@ $post_types = array(
 		'hierarchical' => false,
 		'menu_icon' => 'dashicons-admin-site'
 	),
-
+*/
 );
 
 /*--------------------------------------------------------------------------------------
