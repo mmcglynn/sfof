@@ -320,3 +320,55 @@ function sfof_filter_players() {
 }
 add_action('wp_ajax_sfof_filter_players', 'sfof_filter_players');
 add_action('wp_ajax_nopriv_sfof_filter_players', 'sfof_filter_players');
+
+/* Tags Sidebar */
+function sfof_tags_sidebar($id, $tag, $thumbnail) {
+	if ( $thumbail !== false ) {
+		/* Member Thumbnail */
+		$thumbnail_id = get_post_thumbnail_id( $post->ID );
+		$alt = get_post_meta($thumbnail_id, '_wp_attachment_image_alt', true);
+		echo '<div class="member-image full-width margin-bottom-large">';
+			echo '<img src="'.get_the_post_thumbnail_url(get_the_ID(),'large').'" alt="'.$alt.'" class="full-width" />';
+			if ( $tag == 'member' ) {
+				if ( get_field('first_name', $id) && get_field('last_name', $id) ) {
+					$middleName = '';
+					if ( get_field('middle_name_or_initial', $id) ) {
+						$middleName = get_field('middle_name_or_initial', $id);
+					}
+					echo '<em class="txt-right d-block margin-top margin-bottom-large-double">';
+						echo get_field('first_name', $id) . ' ' . $middleName . ' ' . get_field('last_name', $id);
+					echo '</em>';
+				} elseif ( get_the_post_thumbnail_caption() ) {
+					echo '<em class="txt-right d-block margin-top margin-bottom-large-double">';
+						echo get_the_post_thumbnail_caption();
+					echo '</em>';
+				}
+			}
+		echo '</div>';
+	}
+	/* Credentials Box */
+	if ( $tag == 'member' ) {
+		echo '<div class="member-creds padded-top-large padded-bottom-large padded-left padded-right">';
+		if ( get_field('sfof-position', $id) ) {
+			echo '<strong class="txt-center d-block margin-bottom-small has-blue-color">SFOF Position</strong>';
+			echo '<strong class="txt-center d-block">'.get_field('sfof-position', $id).'</strong>';
+		}
+		if ( get_field('party', $id) ) {
+			echo '<strong class="txt-center d-block margin-top-large margin-bottom-small has-blue-color">Party</strong>';
+			echo '<strong class="txt-center d-block">'.get_field('party', $id).'</strong>';
+		}
+		if ( get_field('name-of-office', $id) ) {
+			$term = '';
+			if ( get_field('term', $id) ) {
+				$term = '<br/>'.get_field('term', $id);
+			}
+ 			echo '<strong class="txt-center d-block margin-top-large margin-bottom-small has-blue-color">Office</strong>';
+			echo '<strong class="txt-center d-block">'.get_field('name-of-office', $id).$term.'</strong>';
+		}
+		if ( get_field('term_ends', $id) ) {
+			echo '<strong class="txt-center d-block margin-top-large margin-bottom-small has-blue-color">Term Ends</strong>';
+			echo '<strong class="txt-center d-block">'.get_field('term_ends', $id).'</strong>';
+		}
+		echo '</div>';
+	}
+}
