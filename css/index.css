@@ -2143,8 +2143,7 @@ footer {
 	}
 
 	.subfooter > .flex-box > *:nth-child(2) .wp-block-group__inner-container .wp-block-social-links.aligncenter > li {
-		margin-bottom: 0;
-		margin: 0 15px;
+		margin: 0 15px 10px;
 		width: 35px;
 		height: 35px;
 		padding: 0 !important;
