@@ -1,0 +1,7 @@
+.editor-post-featured-image__container .components-responsive-wrapper {
+	min-height: 200px;
+}
+
+.editor-post-featured-image .components-responsive-wrapper__content {
+	max-height: 200px;
+}

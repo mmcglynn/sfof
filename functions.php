@@ -325,9 +325,13 @@ add_action('wp_ajax_nopriv_sfof_filter_players', 'sfof_filter_players');
 function sfof_tags_sidebar($id, $tag, $thumbnail) {
 	if ( $thumbail !== false ) {
 		/* Member Thumbnail */
+		$thumbClass = '';
+		if ( $tag == 'state' ) {
+			$thumbClass = 'bg-light-blue border border-thin b-blue border-radius-large padded';
+		}
 		$thumbnail_id = get_post_thumbnail_id( $post->ID );
 		$alt = get_post_meta($thumbnail_id, '_wp_attachment_image_alt', true);
-		echo '<div class="member-image full-width margin-bottom-large">';
+		echo '<div class="member-image full-width margin-bottom-large '.$thumbClass.'">';
 			echo '<img src="'.get_the_post_thumbnail_url(get_the_ID(),'large').'" alt="'.$alt.'" class="full-width" />';
 			if ( $tag == 'member' ) {
 				if ( get_field('first_name', $id) && get_field('last_name', $id) ) {
@@ -372,3 +376,11 @@ function sfof_tags_sidebar($id, $tag, $thumbnail) {
 		echo '</div>';
 	}
 }
+
+/* Allow SVG uploads */
+function sfof_mime_types($mimes) {
+  $mimes['svg'] = 'image/svg+xml';
+  return $mimes;
+}
+add_filter('upload_mimes', 'sfof_mime_types');
+
