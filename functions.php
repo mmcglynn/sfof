@@ -323,7 +323,7 @@ add_action('wp_ajax_nopriv_sfof_filter_players', 'sfof_filter_players');
 
 /* Tags Sidebar */
 function sfof_tags_sidebar($id, $tag, $thumbnail) {
-	if ( $thumbail !== false ) {
+	if ( $thumbnail !== false ) {
 		/* Member Thumbnail */
 		$thumbClass = '';
 		if ( $tag == 'state' ) {
