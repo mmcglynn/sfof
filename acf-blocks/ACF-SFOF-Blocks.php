@@ -26,7 +26,7 @@ function acf_register_sfof_acf_blocks() {
 			'name'				=> 'sfof-billtrack',
 			'title'				=> __('BillTrack50 - SFOF'),
 			'description'		=> __('Shows BillTrack50'),
-			'render_template'	=> get_template_directory_uri() . '/acf-blocks/blocks/ACF-BillTrack/sfof-billtrack.php', // template parts is a folder in the theme folder
+			'render_template'	=> '/acf-blocks/blocks/ACF-BillTrack/sfof-billtrack.php', // template parts is a folder in the theme folder
 			'category'			=> 'SFOF-Blocks',
 			'icon'				=> 'megaphone',
 			'keywords'			=> array( 'sfof-billtrack' ),
