@@ -11,12 +11,8 @@
 
 
 if( is_active_sidebar( 'sidebar-subfooter' ) ):
-	$bg = '';
-	if ($subBG) {
-		$bg = 'style="background-image:url('.$subBG.');background-position: center; background-size: cover;"';
-	}
 ?>
-	<section class="subfooter full-width padded-top-large-double padded-bottom-large p-relative bg-dark-gray" <?php echo $bg;?>>
+	<section class="subfooter full-width padded-top-large-double padded-bottom-large p-relative bg-dark-gray">
 		<div class="inner flex-box space-between p-relative bring-to-front">
 			<?php dynamic_sidebar('sidebar-subfooter'); ?>
 		</div>
