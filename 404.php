@@ -10,12 +10,9 @@
 get_header();
 ?>
 
-	<main id="primary" class="site-main">
-
-		<section class="error-404 not-found">
-			<header class="page-header">
-				<h1 class="page-title"><?php esc_html_e( 'Oops! That page can&rsquo;t be found.', 'sfof' ); ?></h1>
-			</header><!-- .page-header -->
+	<main id="primary" class="site-main padded-top-large padded-bottom-large">
+		<div class="inner">
+			<h1 class="page-title"><?php esc_html_e( 'Oops! That page can&rsquo;t be found!', 'sfof' ); ?></h1>
 
 			<div class="page-content">
 				<p><?php esc_html_e( 'It looks like nothing was found at this location. Maybe try one of the links below or a search?', 'sfof' ); ?></p>
@@ -52,7 +49,7 @@ get_header();
 					?>
 
 			</div><!-- .page-content -->
-		</section><!-- .error-404 -->
+		</div><!-- .error-404 -->
 
 	</main><!-- #main -->
 
