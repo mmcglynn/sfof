@@ -1,4 +1,9 @@
 <?php
+/*
+	Adds ACF SFOF Blocks	
+*/
+
+include get_template_directory() . '/acf-blocks/ACF-SFOF-Blocks.php';
 /**
  * sfof functions and definitions
  *
