@@ -757,6 +757,7 @@ textarea {
 .main-navigation ul li ul li:hover a {
 	background: var(--white-color);
 	color: var(--red-color);
+	padding-bottom: var(--main-normal-spacing);
 }
 
 @media screen and (min-width: 782px) {
