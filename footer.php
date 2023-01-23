@@ -23,7 +23,7 @@ endif;
 
 
 	<footer class="full-width padded-bottom-large p-relative bg-dark-gray">
-		<div class="inner border-top padded-top-large">
+		<div class="inner padded-top-large">
 			<p class="padded-vert no-margin txt-center smaller txt-white">
 				<span class="copyright">Copyright &copy;<?php echo date( 'Y', current_time( 'timestamp', 1 ) ); ?>.</span>
 				<a class="txt-body" href="<?php echo home_url();?>" target="_blank" style="color: #fff"><?php echo get_bloginfo('name');?></a>

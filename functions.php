@@ -328,13 +328,18 @@ add_action('wp_ajax_nopriv_sfof_filter_players', 'sfof_filter_players');
 
 /* Tags Sidebar */
 function sfof_tags_sidebar($id, $tag, $thumbnail) {
-	if ( $thumbnail !== false ) {
+	if ( $tag == 'state' ) {
+		$stateThumb = get_template_directory_uri() . '/assets/states/'.get_post_field( "post_name", get_post() ).'.svg';
+		echo '<div class="member-image full-width margin-bottom-large bg-light-blue border border-thin b-blue border-radius-large padded">';
+			echo '<img src="'.$stateThumb.'" alt="Thumbnail for '.get_the_title( $id ).'" class="full-width" />';
+		echo '</div>';
+	} elseif ( $thumbnail !== false ) {
 		/* Member Thumbnail */
 		$thumbClass = '';
 		if ( $tag == 'state' ) {
 			$thumbClass = 'bg-light-blue border border-thin b-blue border-radius-large padded';
 		}
-		$thumbnail_id = get_post_thumbnail_id( $post->ID );
+		$thumbnail_id = get_post_thumbnail_id( get_the_ID() );
 		$alt = get_post_meta($thumbnail_id, '_wp_attachment_image_alt', true);
 		echo '<div class="member-image full-width margin-bottom-large '.$thumbClass.'">';
 			echo '<img src="'.get_the_post_thumbnail_url(get_the_ID(),'large').'" alt="'.$alt.'" class="full-width" />';
