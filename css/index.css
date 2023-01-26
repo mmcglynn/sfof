@@ -1071,6 +1071,11 @@ input[type="submit"]{
 	text-decoration: underline;
 }
 
+.subfooter h4 {
+	font-size: 20px;
+	font-weight: normal
+}
+
 .subfooter li.menu-item {
 	padding-left: 15px;
 }
@@ -1796,6 +1801,10 @@ footer {
 		margin-bottom: var(--main-normal-spacing);
 		max-width: 100%;
 	}
+
+	.subfooter h4 {
+		font-size: 18px;
+	}
 	
 }
 
@@ -2190,6 +2199,10 @@ footer {
 
 	.subfooter > .flex-box > *:nth-child(2) .wp-block-group__inner-container .wp-block-social-links.aligncenter > li {
 		transform: none;
+	}
+
+	.subfooter h4 {
+		font-size: 16px;
 	}
 	
 	.member-creds {

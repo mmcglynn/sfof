@@ -30,7 +30,7 @@ function acf_register_sfof_acf_blocks() {
 			'category'			=> 'SFOF-Blocks',
 			'icon'				=> 'megaphone',
 			'keywords'			=> array( 'sfof-billtrack' ),
-			'enqueue_style'		=> '',
+			'enqueue_style'		=> get_template_directory_uri() . '/acf-blocks/blocks/ACF-BillTrack/css/sfof-billtrack.css',
 			'mode'          => 'preview',
 		));
 		
