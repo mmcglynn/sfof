@@ -71,8 +71,8 @@ if ($filters) {
 				} else {
 					echo '<div class="'.$class.'">';
 						echo '<a href="'.get_the_permalink().'" class="no-text-decoration full-width">';
-							echo '<div class="post-image full-width margin-bottom-large bg-cover bg-center full-width" style="background-image: url('.get_the_post_thumbnail_url(get_the_ID(),'large').')" >';
-								echo '<img src="'.get_the_post_thumbnail_url(get_the_ID(),'large').'" class="full-width transparent" />';
+							echo '<div class="post-image full-width margin-bottom-large bg-contain bg-center full-width" style="background-repeat:no-repeat;background-image: url('.get_the_post_thumbnail_url(get_the_ID(),'large').')" >';
+								//echo '<img src="'.get_the_post_thumbnail_url(get_the_ID(),'large').'" class="full-width transparent" />';
 							echo '</div>';
 							echo '<h5 style="text-align:center" class="full-width padded no-margin-bottom">'.get_the_title().'</h5>';
 						echo '</a>';
