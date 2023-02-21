@@ -1,18 +1,21 @@
 /* Google Fonts */
+/*
 @import url('https://fonts.googleapis.com/css2?family=Rufina&family=Work+Sans:wght@300;400;600&display=swap');
+*/
 
-/* Variables */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+
+	  /* Variables */
 :root {
 	--main-bg-color: #fff;
 	--main-header-bg: #efefef;
 	--main-header-color: #333;
-	--main-header-font:
-	'Rufina', serif;
+	--main-header-font: 'Playfair Display', serif;
 	--main-body-color: #545454;
-	--main-body-font:
-	'Work Sans', sans-serif;
-	--main-secondary-font:
-	'Work Sans', sans-serif;
+	--main-body-font: sans-serif;
+	/*--main-body-font: 'Work Sans', sans-serif;*/
+	/*--main-secondary-font: 'Work Sans', sans-serif;*/
+	--main-secondary-font: sans-serif;
 	--main-border-color: #dad9d9;
 	--main-normal-spacing: 10px;
 	--main-small-spacing: 5px;
@@ -190,6 +193,14 @@ h5 {
 	line-height: 140%;
 }
 
+h1 strong,
+h2 strong,
+h3 strong,
+h4 strong,
+h5 strong {
+	font-weight: 400;
+}
+
 h1,
 h3,
 h5,
@@ -197,6 +208,7 @@ h5,
 .post-title,
 .header-font {
 	font-family: var(--main-header-font);
+	font-weight: 400;
 }
 
 h2,
@@ -560,8 +572,7 @@ img.alignright{
 	align-content: baseline;	
 }
 
-.justify-center,
-.404-message .search-form {
+.justify-center, .404-message .search-form {
 	justify-content: center;
 }
 
@@ -769,6 +780,10 @@ header.bring-to-front {
 
 .bg-cover {
 	background-size: cover;
+}
+
+.bg-contain {
+	background-size: contain;
 }
 
 .bg-center,
