@@ -46,19 +46,19 @@ if ($filters) {
 			<?php
 			while ( have_posts() ) :
 				the_post();
-				
-				
+
 				if ($layout == 'one-column' || $layout == 'list' || $layout == '') {
 					$thumb = '';
 					$class = '';
-					if ( has_post_thumbnail() ) {
-						$class="has-thumbnail";
-						$thumb .= '<div>';
-							$thumb .= '<a href="'.get_the_permalink().'" class="post-thumbnail">';
-								$thumb .= '<img src="'.get_the_post_thumbnail_url(get_the_ID(),'large').'" alt="'.$alt.'" class="full-width" />';
-							$thumb .= '</a>';
-						$thumb .= '</div>';
-					}
+					$alt = '';
+//					if ( has_post_thumbnail() ) {
+//						$class="has-thumbnail";
+//						$thumb .= '<div>';
+//							$thumb .= '<a href="'.get_the_permalink().'" class="post-thumbnail">';
+//							$thumb .= '<img src="'.get_the_post_thumbnail_url(get_the_ID(),'large').'" alt="'. $alt .'" class="full-width" />';
+//							$thumb .= '</a>';
+//						$thumb .= '</div>';
+//					}
 					echo '<article id="post-'.get_the_ID().'" class="full-width">';
 						echo '<div class="flex-box post-flex p-relative padded '.$class.'">';
 							echo $thumb;
