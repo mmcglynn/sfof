@@ -26,7 +26,7 @@ endif;
 		<div class="inner padded-top-large">
 			<p class="padded-vert no-margin txt-center smaller txt-white">
 				<span class="copyright">Copyright &copy;<?php echo date( 'Y', current_time( 'timestamp', 1 ) ); ?>.</span>
-				<a class="txt-body" href="<?php echo home_url();?>" target="_blank" style="color: #fff"><?php echo get_bloginfo('name');?></a>
+				<a class="txt-body" href="<?php echo home_url();?>" target="_blank" style="color: #fff">Center for Media and Democracy (CMD)</a>
 			</p>
 		</div>
 	</footer>
