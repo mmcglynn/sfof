@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 271 270" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
+    <g id="ND" transform="matrix(1.00544,0,0,1.00945,-1.00876,0.50551)">
+        <g id="NorthDakota" transform="matrix(2.24217,0,0,2.21634,-789.74,-45.4301)">
+            <path d="M472.305,121.307L471.94,113.811L469.951,106.495L468.122,92.845L467.665,83.015L465.675,79.906L464.075,74.556L464.075,64.268L464.761,60.381L462.645,54.882L434.222,54.318L415.631,53.671L389.119,52.378L364.172,50.494L362.912,64.725L361.54,79.814L359.281,104.761L358.795,115.782L415.611,119.546L472.305,121.307Z" style="fill:rgb(46,98,126);fill-opacity:0.15;fill-rule:nonzero;"/>
+        </g>
+        <g id="NorthDakota1" serif:id="NorthDakota" transform="matrix(2.24217,0,0,2.21634,-802.87,-59.5693)">
+            <path d="M472.305,121.307L471.94,113.811L469.951,106.495L468.122,92.845L467.665,83.015L465.675,79.906L464.075,74.556L464.075,64.268L464.761,60.381L462.645,54.882L434.222,54.318L415.631,53.671L389.119,52.378L364.172,50.494L362.912,64.725L361.54,79.814L359.281,104.761L358.795,115.782L415.611,119.546L472.305,121.307Z" style="fill:rgb(0,156,244);fill-rule:nonzero;"/>
+        </g>
+    </g>
+</svg>
