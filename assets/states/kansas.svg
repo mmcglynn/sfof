@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 271 270" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
+    <g id="KS" transform="matrix(1.04288,0,0,1.04288,-1.21609,20.0977)">
+        <g id="Kansas" transform="matrix(1.91632,0,0,1.89425,-707.94,-424.06)">
+            <path d="M504.381,318.769L491.762,318.973L445.673,318.516L401.116,316.458L376.486,315.201L380.63,250.481L402.463,251.281L442.929,252.653L487.054,253.11L492.149,253.11L495.396,256.335L498.164,256.563L499.054,257.638L499.054,259.648L497.225,261.248L496.768,263.855L498.986,267.445L501.501,270.578L504.016,272.567L505.066,283.745L504.381,318.769Z" style="fill:rgb(46,98,126);fill-opacity:0.15;fill-rule:nonzero;"/>
+        </g>
+        <g id="Kansas1" serif:id="Kansas" transform="matrix(1.91632,0,0,1.89425,-719.5,-436.598)">
+            <path d="M504.381,318.769L491.762,318.973L445.673,318.516L401.116,316.458L376.486,315.201L380.63,250.481L402.463,251.281L442.929,252.653L487.054,253.11L492.149,253.11L495.396,256.335L498.164,256.563L499.054,257.638L499.054,259.648L497.225,261.248L496.768,263.855L498.986,267.445L501.501,270.578L504.016,272.567L505.066,283.745L504.381,318.769Z" style="fill:rgb(0,156,244);fill-rule:nonzero;"/>
+        </g>
+    </g>
+</svg>
