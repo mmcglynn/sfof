@@ -1,21 +1,21 @@
 /* Google Fonts */
-/*
+
 @import url('https://fonts.googleapis.com/css2?family=Rufina&family=Work+Sans:wght@300;400;600&display=swap');
-*/
 
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
 
-	  /* Variables */
+/*@import url('https://fonts.googleapis.com/css2?family=Rufina&family=Golos+Text:wght@400;700&display=swap');*/
+
+/* Variables */
 :root {
 	--main-bg-color: #fff;
 	--main-header-bg: #efefef;
 	--main-header-color: #333;
-	--main-header-font: 'Playfair Display', serif;
+	--main-header-font: 'Rufina', serif;
 	--main-body-color: #545454;
-	--main-body-font: sans-serif;
-	/*--main-body-font: 'Work Sans', sans-serif;*/
-	/*--main-secondary-font: 'Work Sans', sans-serif;*/
-	--main-secondary-font: sans-serif;
+	/*--main-body-font: sans-serif;*/
+	/*--main-secondary-font: sans-serif;*/
+	--main-body-font: 'Work Sans', sans-serif;
+	--main-secondary-font: 'Work Sans', sans-serif;
 	--main-border-color: #dad9d9;
 	--main-normal-spacing: 10px;
 	--main-small-spacing: 5px;
@@ -321,7 +321,7 @@ ul.children{
 strong,
 .text-bold,
 .wp-caption p,
-.main-navigation ul > li > a,
+/*.main-navigation ul > li > a,*/
 #primary a{
 	font-weight: bold;
 }
@@ -405,8 +405,9 @@ footer a {
 }
 
 .main-navigation ul > li > a {
-	padding-top: var(--main-small-spacing);
-	font-size: 14px;
+	/*padding-top: var(--main-small-spacing);*/
+	padding: var(--main-small-spacing);
+	font-size: 18px;
 	text-decoration: none;
 }
 
@@ -1009,7 +1010,7 @@ input[type="submit"] {
 .main-navigation ul > li:hover > a{
 	background: var(--red-color);
 	color: var(--white-color);
-	padding-bottom: var(--main-small-spacing);
+	/*padding-bottom: var(--main-small-spacing);*/
 }
 
 .main-navigation ul > li:last-child > a{
@@ -2122,8 +2123,8 @@ footer {
 	}
 	
 	.main-navigation ul > li > a {
-		font-size: 16px;
-		padding: 10px 20px;
+		font-size: 14px;
+		padding: 4px 20px;
 	}
 
 	.main-navigation li.menu-item-has-children:after {
@@ -2347,3 +2348,5 @@ footer {
 		width: 50%;
 	}
 }
+
+
