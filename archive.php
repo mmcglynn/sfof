@@ -14,6 +14,7 @@ $layout = get_field( "archive_page_layout", $term );
 $filters = get_field( "archive_page_filter", $term );
 $class = '';
 $filter = '';
+$plural = '';
 
 if ($layout !== 'one-column') {
 	$class = 'flex-box o-hidden border border-radius box-shadow p-relative margin-bottom full-width';
@@ -24,12 +25,12 @@ if ($filters) {
 		$filter .= '<div class="border border-radius-small b-red d-inline-flex padded margin-bottom-large">';
 			$filter .= '<span class="text-uppercase txt-red padded-left padded-right">Filter by:</span>';
 			foreach( $filters as $f ):
-				$filter .= '<a href="'.esc_url( get_term_link( $f ) ).'" class="text-uppercase txt-red text-bold padded-left padded-right no-text-decoration">'.esc_html( $f->name ).'</a>';
+				$filter .= '<a href="'.esc_url( get_term_link( $f ) ).'" class="text-uppercase txt-red text-bold padded-left padded-right no-text-decoration">'.esc_html( $f->name ).'s</a>';
 			endforeach;
 		$filter .= '</div>';
 	$filter .= '</div>';
+	$plural = 's';
 }
-
 ?>
 <div class="bg-red padded-top padded-bottom">
 	<div class="inner">

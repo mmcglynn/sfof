@@ -573,7 +573,7 @@ img.alignright{
 	align-content: baseline;	
 }
 
-.justify-center, .404-message .search-form {
+.justify-center, .search-form {
 	justify-content: center;
 }
 
@@ -2348,5 +2348,3 @@ footer {
 		width: 50%;
 	}
 }
-
-
