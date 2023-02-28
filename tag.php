@@ -46,9 +46,9 @@ if ($filters) {
 		<div class="flex-box space-between <?php echo get_field( "archive_page_layout", $term );?> p-relative">
 			<?php
 			if ( $term->name == 'Member' ) {
-				query_posts(array('orderby'=>'meta_value','order'=>'ASC','meta_key'=>'last_name'));
+				query_posts(array('orderby'=>'meta_value','order'=>'ASC','meta_key'=>'last_name','numberposts' => -1, 'tag' => $term->name));
 			} else {
-				query_posts(array('orderby'=>'title','order'=>'ASC'));
+				query_posts(array('orderby'=>'title','order'=>'ASC','numberposts' => -1, 'tag' => $term->name));
 			}
 			while ( have_posts() ) :
 				the_post();
