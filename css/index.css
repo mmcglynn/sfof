@@ -10,11 +10,11 @@
 	--main-bg-color: #fff;
 	--main-header-bg: #efefef;
 	--main-header-color: #333;
-	--main-header-font: 'Rufina', serif;
+	--main-header-font: 'Work Sans', sans-serif;
 	--main-body-color: #545454;
 	/*--main-body-font: sans-serif;*/
 	/*--main-secondary-font: sans-serif;*/
-	--main-body-font: 'Work Sans', sans-serif;
+	--main-body-font: 'Rufina', serif;
 	--main-secondary-font: 'Work Sans', sans-serif;
 	--main-border-color: #dad9d9;
 	--main-normal-spacing: 10px;
@@ -324,6 +324,11 @@ strong,
 /*.main-navigation ul > li > a,*/
 #primary a{
 	font-weight: bold;
+}
+
+.main-navigation ul > li > a,
+#primary a{
+	font-family: var(--main-secondary-font);
 }
 
 hr,
@@ -1169,7 +1174,7 @@ input[type="submit"]{
 
 .margin-bottom-large,
 .wp-caption {
-	margin-bottom: var(--main-large-spacing);
+	margin-bottom: var(--main-small-spacing);
 }
 
 .margin-bottom-large-double {
@@ -1537,7 +1542,7 @@ body.single .wp-caption {
 		.pause-icon::before {
 			content: "";
 			position: absolute;
-			width: 0%;
+			width: 0;
 			height: 100%;
 			background-color: var(--white-color);
 			left: 0;
