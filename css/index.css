@@ -702,6 +702,7 @@ img.alignright{
 
 .four-column.flex-box > * {
 	width: 23%;
+	margin-bottom: 1.75em;
 }
 
 .p-fixed {
@@ -735,7 +736,7 @@ input[type="submit"] {
 }
 
 .box-shadow {
-	box-shadow: 0 1px 5px rgba(0,0,0,.2);
+	box-shadow: 0 0 16px rgba(0,0,0,.2);
 }
 
 .b-red {
@@ -790,6 +791,12 @@ header.bring-to-front {
 .bg-center,
 .wp-caption a{
 	background-position: center;
+}
+
+.card_image {
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position-y: 0;
 }
 
 .bg-green {
@@ -2347,4 +2354,9 @@ footer {
 	.flex-box.five-column > * {
 		width: 50%;
 	}
+}
+
+/* Document library plugin */
+.sfof-doc-library .wp-block-embed__wrapper iframe {
+	width: 100%;
 }
