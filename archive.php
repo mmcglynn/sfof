@@ -33,12 +33,12 @@ if ($filters) {
 }
 ?>
 <div class="bg-red padded-top padded-bottom">
-	<div class="inner">
-		<span class="txt-white type-title text-uppercase"><?php echo $term->name;?></span>
+	<div class="inner">DD
+		<span class="txt-white type-title text-uppercase"><?php echo $term->name;?></span> gg
 	</div>
 </div>
 <main id="primary" class="site-main padded-top-large padded-bottom-large">
-	<div class="inner">
+	<div class="inner">FF
 		<?php 
 		echo '<div class="entry-header">';
 		the_title( '<h1 class="entry-title">', '</h1>' ); 

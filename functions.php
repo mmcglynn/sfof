@@ -341,7 +341,7 @@ function sfof_tags_sidebar($id, $tag, $thumbnail) {
 		}
 		$thumbnail_id = get_post_thumbnail_id( get_the_ID() );
 		$alt = get_post_meta($thumbnail_id, '_wp_attachment_image_alt', true);
-		echo '<div class="member-image full-width margin-bottom-large '.$thumbClass.'">';
+		echo '<div class="member-image">' . $thumbClass;
 			echo '<img src="'.get_the_post_thumbnail_url(get_the_ID(),'large').'" alt="'.$alt.'" class="full-width" />';
 			if ( $tag == 'member' ) {
 				if ( get_field('first_name', $id) && get_field('last_name', $id) ) {
@@ -362,26 +362,34 @@ function sfof_tags_sidebar($id, $tag, $thumbnail) {
 	}
 	/* Credentials Box */
 	if ( $tag == 'member' ) {
-		echo '<div class="member-creds padded-top-large padded-bottom-large padded-left padded-right">';
+		echo '<div class="member-creds">';
 		if ( get_field('sfof-position', $id) ) {
-			echo '<strong class="txt-center d-block margin-bottom-small has-blue-color">SFOF Position</strong>';
-			echo '<strong class="txt-center d-block">'.get_field('sfof-position', $id).'</strong>';
+			echo '<dl>';
+			echo '<dt>SFOF Position</dt>';
+			echo '<dd>' . get_field('sfof-position', $id) . '</dd>';
+            echo '</dl>';
 		}
 		if ( get_field('party', $id) ) {
-			echo '<strong class="txt-center d-block margin-top-large margin-bottom-small has-blue-color">Party</strong>';
-			echo '<strong class="txt-center d-block">'.get_field('party', $id).'</strong>';
+            echo '<dl>';
+			echo '<dt>Party</dt>';
+			echo '<dd>' .get_field('party', $id) . '</dd>';
+            echo '</dl>';
 		}
 		if ( get_field('name-of-office', $id) ) {
 			$term = '';
 			if ( get_field('term', $id) ) {
-				$term = '<br/>'.get_field('term', $id);
+				$term = '<br/>'.get_field('term', $id) . '</dd>';
 			}
- 			echo '<strong class="txt-center d-block margin-top-large margin-bottom-small has-blue-color">Office</strong>';
-			echo '<strong class="txt-center d-block">'.get_field('name-of-office', $id).$term.'</strong>';
+            echo '<dl>';
+			echo '<dt>Office</dt>';
+			echo '<dd>' . get_field('name-of-office', $id).$term . '</dd>';
+            echo '</dl>';
 		}
 		if ( get_field('term_ends', $id) ) {
-			echo '<strong class="txt-center d-block margin-top-large margin-bottom-small has-blue-color">Term Ends</strong>';
-			echo '<strong class="txt-center d-block">'.get_field('term_ends', $id).'</strong>';
+            echo '<dl>';
+			echo '<dt>Term Ends</dt>';
+			echo '<dd>' . get_field('term_ends', $id) . '</dd>';
+            echo '</dl>';
 		}
 		echo '</div>';
 	}

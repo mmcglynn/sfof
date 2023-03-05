@@ -15,15 +15,15 @@ while ( have_posts() ) :
 		$i = 0;
 		foreach($posttags as $tag) {
 			if ($i == 0) {
-				$posttag .= $tag->name; 
+				$posttag .= $tag->name;
 			}
 			$i++;
 		}
 	}
 ?>
-	<div class="bg-red padded-top padded-bottom">
+	<div class="type-title">
 		<div class="inner">
-			<span class="txt-white type-title text-uppercase"><?php echo $posttag;?></span>
+            <?php echo $posttag;?>
 		</div>
 	</div>
 	<main id="primary" class="site-main padded-top-large padded-bottom-large">

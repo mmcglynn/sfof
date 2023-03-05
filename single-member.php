@@ -15,7 +15,7 @@ get_header();
 		</div>
 	</div>
 	<main id="primary" class="site-main padded-top-large padded-bottom-large">
-		<div class="inner">
+		<div class="inner">single-member.php
 			<?php
 			while ( have_posts() ) :
 				the_post();

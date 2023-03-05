@@ -1,12 +1,14 @@
 /* Google Fonts */
 
-@import url('https://fonts.googleapis.com/css2?family=Rufina&family=Work+Sans:wght@300;400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Work+Sans:wght@300;400;600&display=swap');
 
 
 /*@import url('https://fonts.googleapis.com/css2?family=Rufina&family=Golos+Text:wght@400;700&display=swap');*/
 
 /* Variables */
 :root {
+	--border-radius: 8px;
+	--box-shadow: 0 0 16px rgba(0,0,0,.2);
 	--main-bg-color: #fff;
 	--main-header-bg: #efefef;
 	--main-header-color: #333;
@@ -14,7 +16,8 @@
 	--main-body-color: #545454;
 	/*--main-body-font: sans-serif;*/
 	/*--main-secondary-font: sans-serif;*/
-	--main-body-font: 'Rufina', serif;
+	/*--main-body-font: 'Rufina', serif;*/
+	--main-body-font: Georgia, serif;
 	--main-secondary-font: 'Work Sans', sans-serif;
 	--main-border-color: #dad9d9;
 	--main-normal-spacing: 10px;
@@ -184,31 +187,17 @@ textarea#comment {
 	width: calc(100% - 6px);
 }
 
-h1,
-h2,
-h3,
-h4,
-h5 {
+h1, h2, h3, h4, h5 {
 	color: var(--main-header-color);
 	line-height: 140%;
 }
 
-h1 strong,
-h2 strong,
-h3 strong,
-h4 strong,
-h5 strong {
-	font-weight: 400;
-}
-
-h1,
-h3,
-h5,
+h1, h3, h5,
 .page-title,
 .post-title,
 .header-font {
 	font-family: var(--main-header-font);
-	font-weight: 400;
+	/*font-weight: 400;*/
 }
 
 h2,
@@ -219,14 +208,21 @@ h4 {
 h1,
 .page-title,
 .post-title {
-	font-size: 2em;
+	font-size: 2.5em;
 	margin: 0 0 var(--main-normal-spacing);
 }
 
 .type-title {
+	background-color: var(--red-color);
+	padding-top: var(--main-normal-spacing);
+	padding-bottom: .75em;
+}
+
+.type-title .inner {
+	font-family: var(--main-secondary-font);
+	color: var(--white-color);
+	text-transform: uppercase;
 	font-size: 1.5em;
-	margin: 0 0 4px;
-	display: block;
 }
 
 h2 {
@@ -240,6 +236,10 @@ h3 {
 	margin: 0 0 var(--main-normal-spacing);
 }
 
+h3 strong {
+	font-weight: 400;
+}
+
 h4,
 .wp-block-latest-posts__post-title{
 	font-size: 1.25em;
@@ -247,7 +247,7 @@ h4,
 }
 
 h5 {
-	font-size: 1em;
+	font-size: 1.25em;
 	margin: 0 0 var(--main-small-spacing);
 }
 
@@ -329,6 +329,7 @@ strong,
 .main-navigation ul > li > a,
 #primary a{
 	font-family: var(--main-secondary-font);
+	font-weight: 700;
 }
 
 hr,
@@ -413,6 +414,76 @@ footer a {
 	/*padding-top: var(--main-small-spacing);*/
 	padding: var(--main-small-spacing);
 	font-size: 18px;
+	text-decoration: none;
+}
+
+/* Cards */
+.card-holder {
+	margin: 0;
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(234px, 1fr));
+	grid-gap: 30px;
+}
+.card {
+	border: 1px solid var(--main-border-color);
+	border-radius: var(--border-radius);
+	box-shadow: var(--box-shadow);
+	position: relative;
+	overflow: hidden;
+}
+.card a {
+	text-decoration: none;
+}
+.card a:hover {
+	filter: grayscale(90%);
+}
+.card a div {
+	height: 300px;
+	width: 100%;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position-y: 0;
+}
+.card a h5 {
+	width: 100%;
+	padding: .75em 0;
+	margin-bottom: 0;
+	text-align:center;
+	color: var(--red-color);
+	font-weight: 400;
+}
+.card_image {
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position-y: 0;
+}
+.card.group a div {
+	background-size: contain;
+	background-position: 50%;
+	background-repeat: no-repeat;
+	border: 10px solid white;
+}
+
+/* Filter */
+.filter {
+	margin: .5em 0 1em 0
+}
+.filter div {
+	border: 1px solid var(--main-border-color);
+	border-radius: 4px;
+	border-color: var(--red-color);
+	display: inline-flex;
+	margin-bottom: var(--main-small-spacing);
+	color: var(--red-color);
+	padding-left: var(--main-normal-spacing);
+	padding-right: var(--main-normal-spacing);
+}
+.filter div a {
+	text-transform: uppercase;
+	color: var(--red-color);
+	font-weight: 700;
+	padding-left: var(--main-normal-spacing);
+	padding-right: var(--main-normal-spacing);
 	text-decoration: none;
 }
 
@@ -700,7 +771,9 @@ img.alignright{
 .subfooter > .flex-box > * {
 	width: 33%;
 }
-
+.subfooter .inner .widget {
+	font-family: var(--main-secondary-font)
+}
 .subfooter > .flex-box > *:last-child {
 	width: 22%;
 }
@@ -798,11 +871,7 @@ header.bring-to-front {
 	background-position: center;
 }
 
-.card_image {
-	background-repeat: no-repeat;
-	background-size: cover;
-	background-position-y: 0;
-}
+
 
 .bg-green {
 	background-color: var(--green-color);
@@ -970,7 +1039,7 @@ input[type="submit"] {
 }
 
 .post-image {
-	height: 250px;
+	height: 300px;
 	width: 100%;
 }
 
@@ -1225,8 +1294,7 @@ input[type="submit"]{
 	text-transform: lowercase;
 }
 
-.text-uppercase,
-.main-navigation ul > li > a{
+.main-navigation ul > li > a {
 	text-transform: uppercase;
 }
 
@@ -1567,16 +1635,50 @@ body.single .wp-caption {
 			animation-fill-mode: forwards;
 		}
 
+/* WordPress Overrides */
+.entry-content ul li {
+	margin-bottom: 1em;
+}
+
+
 /* Sidebar */
 .sidebar{
 	max-width: 300px;
 	width: 100%;
 }
 
+.member-image {
+	border-radius: var(--border-radius);
+	overflow: hidden;
+}
+
 .member-creds {
 	background: var(--light-blue-color);
-	border-radius: 14px;
-	border: 1px solid var(--blue-color);
+	border-radius: var(--border-radius);
+	box-shadow: var(--box-shadow);
+	font-family: var(--main-secondary-font);
+}
+
+.member-creds dl {
+	margin: 0;
+	padding: var(--main-large-spacing);
+	line-height: 1.5em;
+	border-bottom: 2px solid white;
+}
+.member-creds dl:last-child {
+	border-bottom: none;
+}
+.member-creds dl dt {
+	color: var(--blue-color);
+	font-weight: 400;
+}
+.member-creds dl dd {
+	margin-bottom: 0;
+	font-weight: 700;
+}
+
+.member-creds div:last-child {
+	border-bottom: none;
 }
 
 	.member-creds > *:last-child {
