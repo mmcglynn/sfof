@@ -17,7 +17,7 @@
 	/*--main-body-font: sans-serif;*/
 	/*--main-secondary-font: sans-serif;*/
 	/*--main-body-font: 'Rufina', serif;*/
-	--main-body-font: Georgia, serif;
+	--main-body-font: 'Noto Serif', Georgia, serif;
 	--main-secondary-font: 'Work Sans', sans-serif;
 	--main-border-color: #dad9d9;
 	--main-normal-spacing: 10px;
@@ -2466,4 +2466,16 @@ footer {
 /* Document library plugin */
 .sfof-doc-library .wp-block-embed__wrapper iframe {
 	width: 100%;
+}
+
+
+/* Modal additional styles  */
+#modal_interior {
+	font-family: var(--main-secondary-font);
+}
+#tooltip h5 {
+	font-family: var(--main-body-font);
+}
+#tooltip p {
+	font-family: var(--main-secondary-font);
 }
