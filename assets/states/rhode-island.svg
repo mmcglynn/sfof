@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 271 270" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
+    <g id="RI" transform="matrix(1.01903,0,0,1.01903,4.24688,0.387144)">
+        <g id="RhodeIsland" transform="matrix(16.157,4.37629,-4.32967,15.9849,-13335.2,-6339.74)">
+            <path d="M875.07,173.462L874.587,169.257L873.779,164.892L872.081,158.992L877.82,157.456L879.437,158.588L882.832,162.953L885.741,167.399L882.83,168.935L881.536,168.774L880.405,170.552L877.98,172.492L875.07,173.462Z" style="fill:rgb(46,98,126);fill-opacity:0.15;fill-rule:nonzero;"/>
+        </g>
+        <g id="RhodeIsland1" serif:id="RhodeIsland" transform="matrix(16.157,4.37629,-4.32967,15.9849,-13352.2,-6353.74)">
+            <path d="M875.07,173.462L874.587,169.257L873.779,164.892L872.081,158.992L877.82,157.456L879.437,158.588L882.832,162.953L885.741,167.399L882.83,168.935L881.536,168.774L880.405,170.552L877.98,172.492L875.07,173.462Z" style="fill:rgb(0,156,244);fill-rule:nonzero;"/>
+        </g>
+    </g>
+</svg>

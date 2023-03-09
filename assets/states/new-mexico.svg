@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 271 270" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
+    <g transform="matrix(0.98963,0,0,0.98963,2.00328,-0.0707013)">
+        <g id="NewMexico" transform="matrix(2.02305,-0.0884243,0.0874055,1.99974,-492.492,-568.685)">
+            <path d="M283.724,424.683L283.074,418.56L291.718,419.086L321.234,422.15L349.627,423.59L351.592,401.257L355.319,345.381L356.438,325.992L358.451,326.342L358.437,315.267L326.233,312.864L289.295,308.437L254.83,304.321L250.63,335.079L243.665,388.281L239.913,415.203L237.863,428.513L253.324,430.502L254.617,420.479L271.268,423.065L283.724,424.683Z" style="fill:rgb(46,98,126);fill-opacity:0.15;fill-rule:nonzero;"/>
+        </g>
+        <g id="NewMexico1" serif:id="NewMexico" transform="matrix(2.02305,-0.0884243,0.0874055,1.99974,-507.492,-583.685)">
+            <path d="M283.724,424.683L283.074,418.56L291.718,419.086L321.234,422.15L349.627,423.59L351.592,401.257L355.319,345.381L356.438,325.992L358.451,326.342L358.437,315.267L326.233,312.864L289.295,308.437L254.83,304.321L250.63,335.079L243.665,388.281L239.913,415.203L237.863,428.513L253.324,430.502L254.617,420.479L271.268,423.065L283.724,424.683Z" style="fill:rgb(0,156,244);fill-rule:nonzero;"/>
+        </g>
+    </g>
+</svg>
