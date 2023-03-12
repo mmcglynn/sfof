@@ -2,78 +2,55 @@
 <?php 
 get_header();
 ?>
-	<div class="bg-red padded-top padded-bottom">
-		<div class="inner">
-			<span class="txt-white type-title text-uppercase">Players</span>
-		</div>
+	<div class="type-title">
+		<div class="inner">Players</div>
 	</div>
 	<main id="primary" class="site-main padded-top-large padded-bottom-large">
 		<div class="inner">
-			
-			<?php
-			while ( have_posts() ) :
-				the_post();
+			<div class="filter flex-box flex-end full-width">
+				<div>
+					<span>Filter by:</span>
+					<a href="/tag/funder/" data-wpel-link="internal">Funders</a>
+					<a href="/tag/group/" data-wpel-link="internal">Groups</a>
+					<a href="/tag/operative/" data-wpel-link="internal">Operatives</a>
+				</div>
+			</div>
+			<div class="card-holder four-column">
+                <?php
+				$args = array(
+						'tag' => 'funder,group,operative',
+					'numberposts' => -1,
+                    'orderby' => 'title',
+					'order' => 'asc'
+				);
+                $filtered_posts = get_posts($args);
 
-				get_template_part( 'template-parts/content', get_post_type() );
+                foreach ( $filtered_posts as $filtered_post ){
 
-			endwhile; // End of the loop.
-			
-			$categories = get_categories(); 
-			?>
-			<ul class="cat-list">
-			  <li><a class="cat-list_item active" href="#!" data-slug="">All projects</a></li>
+					$tag = get_the_tags( $filtered_post->ID );
+                    $slug = $tag[0]->slug;
 
-			  <?php foreach($categories as $category) : ?>
-				<li>
-				  <a class="cat-list_item" href="#!" data-slug="<?= $category->slug; ?>">
-					<?= $category->name; ?>
-				  </a>
-				</li>
-			  <?php endforeach; ?>
-			</ul>
-			
-			<?php 
-			  $projects = new WP_Query([
-				'post_type' => 'player',
-				'posts_per_page' => -1,
-				'order_by' => 'date',
-				'order' => 'desc',
-			  ]);
-			?>
+					echo '<div class="card ' . $slug . '">';
+					//var_dump(get_the_tags( $filtered_post->ID ));
 
-			<?php if($projects->have_posts()): ?>
-			  <ul class="project-tiles">
-				<?php
-				  while($projects->have_posts()) : $projects->the_post();
-					include('_components/project-list-item.php');
-				  endwhile;
-				?>
-			  </ul>
-			  <?php 
-			  wp_reset_postdata(); 
-			  endif; ?>
-			
+//                    if (in_array("group", get_the_tags( $filtered_post->ID )))
+//                    {
+//                        echo "Match found";
+//                    }
+//                    else
+//                    {
+//                        echo "Match not found";
+//                    }
+                    echo '<a href="' . $filtered_post->guid . '" data-wpel-link="internal">';
+                    echo '<div style="background-image: url(' . get_the_post_thumbnail_url($filtered_post->ID) . ')"></div>';
+                    echo '<h5>' . $filtered_post->post_title . '</h5>';
+                    echo '</a>';
+                    echo '</div>';
+                }
+                ?>
+			</div>
 		</div>
-		</div>
-	</main><!-- #main -->
-	<script>
-		jQuery('.cat-list_item').on('click', function() {
-		jQuery('.cat-list_item').removeClass('active');
-		jQuery(this).addClass('active');
+	</main>
 
-		jQuery.ajax({
-		  type: 'POST',
-		  url: '/wp-admin/admin-ajax.php',
-		  dataType: 'html',
-		  data: {
-			action: 'sfof_filter_players',
-			category: jQuery(this).data('slug'),
-		  },
-		  success: function(res) {
-			jQuery('.project-tiles').html(res);
-		  }
-		})
-	  });
-	</script>
 <?php
 get_footer();

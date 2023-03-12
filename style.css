@@ -1063,10 +1063,20 @@ textarea {
 .main-navigation li.menu-item-has-children {
 	margin-right: 10px;
 }
-.page:not(.home) .site-main .inner {
-	max-width: 1010px;
+/*.page:not(.home) .site-main .inner {*/
+/*	max-width: 1010px;*/
+/*}*/
+
+.page-template-default .site-main .inner {
+	/*border: 4px solid purple;*/
+	max-width: 1008px;
 }
+
+.home .site-main .inner {
+	max-width: 1200px;
+}
+
 .site-main .inner .entry-header .entry-title {
-	color: var(--dkblue);
+	color: var(--blue-color);
 	margin: .5em 0;
 }

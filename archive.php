@@ -33,7 +33,7 @@ if ($filters) {
 }
 ?>
 <div class="bg-red padded-top padded-bottom">
-	<div class="inner">DD
+	<div class="inner">
 		<span class="txt-white type-title text-uppercase"><?php echo $term->name;?></span> gg
 	</div>
 </div>

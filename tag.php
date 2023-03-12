@@ -17,9 +17,15 @@ $class = '';
 $filter = '';
 $plural = 'S';
 
-if ($layout !== 'one-column') {
+//echo'$layout:<br />';
+//var_dump($layout);
+//
+//echo '$filters: <br />';
+//var_dump($filters);
+
+//if ($layout !== 'one-column') {
 	//$class = 'flex-box o-hidden border border-radius box-shadow p-relative margin-bottom full-width ' . $card_class;
-}
+//}
 
 if ($filters) {
 	$filter = '<div class="filter flex-box flex-end full-width">';
@@ -33,7 +39,7 @@ if ($filters) {
 	$plural = 's';
 }
 ?>
-<!-- bg-red padded-top padded-bottom  -->
+
 <div class="type-title">
 	<div class="inner">
 		<?php echo $term->name.$plural;?>

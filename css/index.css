@@ -264,7 +264,7 @@ ul {
 p,
 ul li,
 ol li {
-	line-height: 140%;
+	line-height: 160%;
 }
 
 ul {
@@ -457,7 +457,7 @@ footer a {
 	background-size: cover;
 	background-position-y: 0;
 }
-.card.group a div {
+.card.group a div, .card.funder a div {
 	background-size: contain;
 	background-position: 50%;
 	background-repeat: no-repeat;
@@ -475,8 +475,7 @@ footer a {
 	display: inline-flex;
 	margin-bottom: var(--main-small-spacing);
 	color: var(--red-color);
-	padding-left: var(--main-normal-spacing);
-	padding-right: var(--main-normal-spacing);
+	padding: var(--main-normal-spacing);
 }
 .filter div a {
 	text-transform: uppercase;
@@ -768,6 +767,10 @@ img.alignright{
 	width: 31%;
 }
 
+.subfooter {
+	margin-top: 2em;
+}
+
 .subfooter > .flex-box > * {
 	width: 33%;
 }
@@ -776,6 +779,10 @@ img.alignright{
 }
 .subfooter > .flex-box > *:last-child {
 	width: 22%;
+}
+
+footer {
+	font-family: var(--main-secondary-font);
 }
 
 .four-column.flex-box > * {
