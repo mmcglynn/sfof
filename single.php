@@ -12,12 +12,9 @@ while ( have_posts() ) :
 	$posttags = get_the_tags();
 	$posttag = '';
 	if ($posttags) {
-		$i = 0;
-		foreach($posttags as $tag) {
-			if ($i == 0) {
-				$posttag .= $tag->name;
-			}
-			$i++;
+		$posttag .= $posttags[0]->name;
+		if( $posttag == 'Non-member person' ) {
+            $posttag = 'Operative';
 		}
 	}
 ?>
@@ -26,6 +23,7 @@ while ( have_posts() ) :
             <?php echo $posttag;?>
 		</div>
 	</div>
+<p class="template-identifier">single.php</p>
 	<main id="primary" class="site-main padded-top-large padded-bottom-large">
 		<div class="inner">
 			<?php

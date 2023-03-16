@@ -17,16 +17,6 @@ $class = '';
 $filter = '';
 $plural = 'S';
 
-//echo'$layout:<br />';
-//var_dump($layout);
-//
-//echo '$filters: <br />';
-//var_dump($filters);
-
-//if ($layout !== 'one-column') {
-	//$class = 'flex-box o-hidden border border-radius box-shadow p-relative margin-bottom full-width ' . $card_class;
-//}
-
 if ($filters) {
 	$filter = '<div class="filter flex-box flex-end full-width">';
 		$filter .= '<div>';
@@ -56,6 +46,24 @@ if ($filters) {
 			<?php
 			if ( $term->name == 'Member' ) {
 				query_posts(array('orderby'=>'meta_value','order'=>'ASC','meta_key'=>'last_name','numberposts' => -1, 'tag' => $term->name));
+			} elseif ($term->name == 'Operative') {
+
+                $args = array(
+                    'tag' => 'operative',
+                    'numberposts' => -1,
+                    'order' => 'ASC',
+                    'orderby' => 'meta_value',
+                    'meta_key' => 'sort_name'
+                );
+                query_posts($args);
+
+//                $filtered_posts = get_posts($args);
+//                foreach ( $filtered_posts as $filtered_post ){
+//                    $sortname = get_post_meta( $filtered_post->ID, 'sort_name', true);
+//					echo $sortname . '<br />';
+//                }
+//				return;
+
 			} else {
 				query_posts(array('orderby'=>'title','order'=>'ASC','numberposts' => -1, 'tag' => $term->name));
 			}
@@ -63,7 +71,6 @@ if ($filters) {
 				the_post();
 				if ($layout == 'one-column' || $layout == 'list' || $layout == '') {
 					$thumb = '';
-					//$class = '';
 					$alt = '';
 					echo '<article id="post-'.get_the_ID().'" class="full-width">';
 						echo '<div class="flex-box post-flex p-relative padded '.$class.'">';
