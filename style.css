@@ -1080,3 +1080,86 @@ textarea {
 	color: var(--blue-color);
 	margin: .5em 0;
 }
+
+/* US Map Facts Modal plugin - additional styles  */
+#tooltip h5 {
+	font-family: var(--main-body-font);
+}
+#tooltip p {
+	font-family: var(--main-secondary-font);
+}
+
+
+/*
+	Bootstrap Modal style overrides
+*/
+	
+.modal-content {
+	border-radius: .5rem;
+}
+
+/* Modal Header */
+.modal-header {
+	background-color: var(--dkred);
+	font-family: var(--main-secondary-font);
+	border-top-left-radius: .5rem;
+	border-top-right-radius: .5rem;
+}
+.modal-header .modal-title {
+	color: #FFFFFF;
+	text-transform: uppercase;
+	font-size: 1.5em;
+}
+.btn-close {
+	background: transparent url("data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20viewBox%3D%270%200%2016%2016%27%20fill%3D%27%23fff%27%3E%3Cpath%20d%3D%27M.293.293a1%201%200%20011.414%200L8%206.586%2014.293.293a1%201%200%20111.414%201.414L9.414%208l6.293%206.293a1%201%200%2001-1.414%201.414L8%209.414l-6.293%206.293a1%201%200%2001-1.414-1.414L6.586%208%20.293%201.707a1%201%200%20010-1.414z%27%2F%3E%3C%2Fsvg%3E") center/1em auto no-repeat;	
+}
+/* Modal Footer */
+
+.modal-footer {
+	justify-content: center;
+}
+.modal-footer a {
+  	color: var(--dkred);
+	font-family: var(--main-secondary-font);
+  	font-size: 1.5rem;
+  	font-weight: 700;
+  	text-transform: uppercase;
+  	text-decoration: none;
+	background-image: url("data:image/svg+xml,%3Csvg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 1000 1000' enable-background='new 0 0 1000 1000' xml:space='preserve'%3E%3Cmetadata%3E Svg Vector Icons : http://www.onlinewebfonts.com/icon %3C/metadata%3E%3Cg fill='%23AF2525'%3E%3Cg%3E%3Cg id='Layer_1_117_'%3E%3Cpath d='M506.8,128.4c-30.9,30.9-30.9,80.8,0,111.6l181,181H88.9C45.4,421.1,10,456.4,10,500c0,43.6,35.4,78.9,78.9,78.9h598.9l-181,181c-30.9,30.9-30.9,80.8,0,111.6c15.4,15.4,35.6,23.1,55.8,23.1c20.2,0,40.4-7.7,55.8-23.1L990,500L618.4,128.4C587.5,97.6,537.7,97.6,506.8,128.4z'/%3E%3C/g%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  	background-repeat: no-repeat;
+  	background-position: 100% 0;
+  	padding-right: 1.5em;
+}
+
+/* Card  */
+.modal-card h4 {
+    font-family: var(--main-secondary-font);
+  	font-weight: 400;
+  	font-size: 1.75em;
+}
+.modal-card h4 a {
+    text-decoration: none;
+}
+.modal-card h4 a:hover {
+    color: var(--dkred);
+}
+.modal-card p {
+    font-family: Sans-Serif;
+    font-size: 1rem;
+}
+.modal-card a.btn {
+    font-size: 1rem;
+    font-weight: 700;
+	font-family: var(--main-secondary-font);
+    text-transform: uppercase;
+    background-color: var(--dkred);
+    color: #FFF;
+    padding: .5rem 2rem;
+    border-radius: .75em;
+    text-decoration: none;
+}
+
+
+
+
+
