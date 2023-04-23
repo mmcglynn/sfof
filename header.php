@@ -34,7 +34,7 @@
 	</section>
 	
 	<header id="masthead" class="site-header bg-gray border-bottom thick b-red">
-		<div class="inner p-relative padded-top-large padded-bottom-large">
+		<div class="inner p-relative">
 			<div class="flex-box stay-flex two-column space-between">
 				<div class="site-branding">
 					<?php
