@@ -343,22 +343,22 @@ function sfof_tags_sidebar($id, $tag, $thumbnail) {
 		$alt = get_post_meta($thumbnail_id, '_wp_attachment_image_alt', true);
 		echo '<div class="member-image">' . $thumbClass;
 			echo '<img src="'.get_the_post_thumbnail_url(get_the_ID(),'large').'" alt="'.$alt.'" class="full-width" />';
-			if ( $tag == 'member' ) {
-				if ( get_field('first_name', $id) && get_field('last_name', $id) ) {
-					$middleName = '';
-					if ( get_field('middle_name_or_initial', $id) ) {
-						$middleName = get_field('middle_name_or_initial', $id);
-					}
-					echo '<em class="txt-right d-block margin-top margin-bottom-large-double">';
-						echo get_field('first_name', $id) . ' ' . $middleName . ' ' . get_field('last_name', $id);
-					echo '</em>';
-				} elseif ( get_the_post_thumbnail_caption() ) {
-					echo '<em class="txt-right d-block margin-top margin-bottom-large-double">';
-						echo get_the_post_thumbnail_caption();
-					echo '</em>';
-				}
-			}
 		echo '</div>';
+		if ( $tag == 'member' ) {
+			if ( get_field('first_name', $id) && get_field('last_name', $id) ) {
+				$middleName = '';
+				if ( get_field('middle_name_or_initial', $id) ) {
+					$middleName = get_field('middle_name_or_initial', $id);
+				}
+				echo '<em class="txt-right d-block margin-top margin-bottom-large-double">';
+				echo get_field('first_name', $id) . ' ' . $middleName . ' ' . get_field('last_name', $id);
+				echo '</em>';
+			} elseif ( get_the_post_thumbnail_caption() ) {
+				echo '<em class="txt-right d-block margin-top margin-bottom-large-double">';
+				echo get_the_post_thumbnail_caption();
+				echo '</em>';
+			}
+		}
 	}
 	/* Credentials Box */
 	if ( $tag == 'member' ) {
