@@ -39,13 +39,6 @@ if ( has_post_thumbnail() ) {
 		<div class="entry-content">
 			<?php
 			the_content();
-
-			/*wp_link_pages(
-				array(
-					'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'sfof' ),
-					'after'  => '</div>',
-				)
-			);*/
 			
 			if ( get_edit_post_link() ) : ?>
 				<footer class="entry-footer">
