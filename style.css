@@ -1142,7 +1142,7 @@ textarea {
     color: var(--dkred);
 }
 .modal-card p {
-    font-family: Sans-Serif;
+    font-family: sans-serif;
     font-size: 1rem;
 }
 .modal-card a.btn {
