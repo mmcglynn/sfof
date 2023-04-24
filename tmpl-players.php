@@ -72,12 +72,15 @@ get_header();
 				// Finally, retrieve the sorted posts
                 $sorted_posts = get_posts(array('post__in' => $sorted_ids, 'orderby' => 'post__in', 'numberposts' => -1));
 
+				//var_dump($sorted_posts);
+
                 // Build card
 				foreach ($sorted_posts as $sorted_post) {
 					$tag = get_the_tags( $sorted_post->ID );
                     $slug = $tag[0]->slug;
+
 					echo '<div class="card ' . $slug . '">';
-                    echo '<a href="' . $sorted_post->guid . '" data-wpel-link="internal">';
+                    echo '<a href="' . get_site_url() . '/' .  $sorted_post->post_name . '" data-wpel-link="internal">';
                     echo '<div style="background-image: url(' . get_the_post_thumbnail_url($sorted_post->ID) . ')"></div>';
                     echo '<h5>' . $sorted_post->post_title . '</h5>';
                     echo '</a>';
