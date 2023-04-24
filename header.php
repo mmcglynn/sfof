@@ -33,7 +33,7 @@
 		</div>
 	</section>
 	
-	<header id="masthead" class="site-header bg-gray border-bottom thick b-red">
+	<header id="masthead" class="site-header bg-gray">
 		<div class="inner p-relative">
 			<div class="flex-box stay-flex two-column space-between">
 				<div class="site-branding">
