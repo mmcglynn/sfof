@@ -23,7 +23,7 @@ if ($layout !== 'one-column') {
 if ($filters) {
 	$filter = '<div class="flex-box flex-end full-width">';
 		$filter .= '<div class="border border-radius-small b-red d-inline-flex padded margin-bottom-large">';
-			$filter .= '<span class="text-uppercase txt-red padded-left padded-right">Filter by:</span>';
+			$filter .= '<span class="text-uppercase txt-red padded-left padded-right">Filter by...</span>';
 			foreach( $filters as $f ):
 				$filter .= '<a href="'.esc_url( get_term_link( $f ) ).'" class="text-uppercase txt-red text-bold padded-left padded-right no-text-decoration">'.esc_html( $f->name ).'s</a>';
 			endforeach;
