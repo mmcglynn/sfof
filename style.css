@@ -1079,6 +1079,10 @@ textarea {
 	margin: .5em 0;
 }
 
+.site-main .entry-header {
+	padding-bottom: 0;
+}
+
 /* US Map Facts Modal plugin - additional styles  */
 #tooltip h5 {
 	font-family: var(--main-body-font);
@@ -1091,7 +1095,7 @@ textarea {
 /*
 	Bootstrap Modal style overrides
 */
-	
+
 .modal-content {
 	border-radius: .5rem;
 }
